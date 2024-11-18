@@ -2,3 +2,8 @@ collections:
   - name: git+git@github.com:laurobmb/ansible_statusinvest_collection.git
     type: git
     version: main  # Branch, tag ou commit específico
+
+roles:
+  - name: laurobmb.statusinvest
+    src: git+git@github.com:laurobmb/ansible_statusinvest_collection.git
+    version: main  # Branch, tag ou commit específico
