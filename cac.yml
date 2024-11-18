@@ -1,0 +1,31 @@
+---
+- name: Playbook to configure ansible controller post installation
+  hosts: localhost
+  connection: local
+  vars:
+    description: Teste
+    organization: devops
+    controller_hostname: controller01.localnet.local
+    controller_validate_certs: false
+    controller_username: admin
+    controller_password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          37653530666463633332363666646432613264393435326266353139363438346435646533313237
+          3963653139653633616532386665353037623665613632390a326334363264356531383934313633
+          63623833643234636166653033396462396534306230386632623364663136386437303964663866
+          3036353630613436330a366338663739346234666133323331633635346331613230333938666135
+          3030
+
+  pre_tasks:
+    - name: Include vars from controller_configs directory
+      ansible.builtin.include_vars:
+        dir: cac/
+        ignore_files: [controller_config.yml.template]
+        extensions: ["yml"]
+
+  roles:
+    - {role: infra.controller_configuration.organizations, when: controller_organizations is defined}
+    - {role: infra.controller_configuration.projects, when: controller_projects is defined}
+    - {role: infra.controller_configuration.inventories, when: controller_inventories is defined}
+    - {role: infra.controller_configuration.hosts, when: controller_hosts is defined}
+    - {role: infra.controller_configuration.job_templates, when: controller_templates is defined}

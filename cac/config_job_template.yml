@@ -1,0 +1,18 @@
+---
+controller_templates:
+  - name: Get Tiker
+    description: Teste Devops
+    organization: devops
+    project: Statusinvest Collection Project
+    inventory: localhost
+    playbook: "main.yml"
+    scm_branch: "main"
+    forks: 0
+    limit: ""
+    verbosity: 0
+    job_type: "run"
+    job_slice_count: 1
+    ask_variables_on_launch: true
+    extra_vars:
+      cluster: cluster
+
