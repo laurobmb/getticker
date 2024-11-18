@@ -3,10 +3,10 @@ controller_projects:
   - name: Statusinvest Collection Project
     description: Teste Devops
     organization: devops
-    scm_type: "git"
-    scm_url: "https://github.com/laurobmb/ansible_statusinvest_collection.git"
-    scm_branch: "main"
-    scm_clean: True
+    scm_type: git
+    scm_url: https://github.com/laurobmb/getticker.git
+    scm_branch: main
+    scm_clean: False
     scm_delete_on_update: False
     scm_update_on_launch: True
     scm_update_cache_timeout: "0"
