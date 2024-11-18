@@ -1,0 +1,4 @@
+roles:
+  - name: laurobmb.statusinvest
+    src: git+git@github.com:laurobmb/ansible_statusinvest_collection.git
+    version: main
