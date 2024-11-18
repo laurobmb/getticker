@@ -1,16 +1,23 @@
 ---
 - name: STATUSINVEST
   hosts: localhost
-  tasks:
-    - name: Usando a role da collection
-      ansible.builtin.import_role:
-        name: statusinvest
-      vars:
-        acoes: 'petr4'
-        fundos: 'hgre11'
-      register: greeting
+  vars:
+    acoes: 'petr4'
+    fundos: 'hgre11'
+  roles:
+    - role: statusinvest
 
-    - name: Debug role
-      ansible.builtin.debug:
-        msg: "{{ greeting }}"
-
+#   tasks:
+#    - name: Usando o modulo diretamente
+#      laurobmb.statusinvest.statusinvest:
+#        statusinvest_acoes: "{{ acoes }}"
+#        statusinvest_fundos: "{{ fundos }}"
+#      register: greeting
+#      vars:
+#        acoes: 'bbas3'
+#        fundos: 'vghf11'
+#
+#    - name: Debug modulo
+#      ansible.builtin.debug:
+#        msg: "{{ greeting }}"
+#
