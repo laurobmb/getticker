@@ -1,4 +1,0 @@
----
-- name: Usando a role da collection
-  ansible.builtin.import_role:
-    name: laurobmb.statusinvest.getdata

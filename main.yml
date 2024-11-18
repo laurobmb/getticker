@@ -5,7 +5,7 @@
     acoes: 'petr4'
     fundos: 'hgre11'
   roles:
-    - role: statusinvest
+    - role: laurobmb.statusinvest.getdata
 
 #   tasks:
 #    - name: Usando o modulo diretamente
