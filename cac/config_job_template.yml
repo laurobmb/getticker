@@ -2,7 +2,7 @@
 controller_templates:
   - name: Get Tiker
     description: Teste Devops
-    organization: devops
+    organization: statusinvest
     project: Statusinvest Collection Project
     inventory: localhost
     playbook: "main.yml"
@@ -12,7 +12,7 @@ controller_templates:
     verbosity: 0
     job_type: "run"
     job_slice_count: 1
-    ask_variables_on_launch: true
+    ask_variables_on_launch: false
     extra_vars:
       cluster: cluster
 
