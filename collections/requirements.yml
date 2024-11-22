@@ -1,4 +1,4 @@
+---
 collections:
-  - type: git
-    version: main  # Branch, tag ou commit específico
-    name: git+git@github.com:laurobmb/ansible_statusinvest_collection.git
+  - name: laurobmb.statusinvest
+    version: 1.0.32
