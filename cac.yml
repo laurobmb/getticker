@@ -4,7 +4,7 @@
   connection: local
   vars:
     description: Teste
-    organization: devops
+    orgs: devops
     controller_hostname: controller01.localnet.local
     controller_validate_certs: false
     controller_username: admin
@@ -25,6 +25,8 @@
 
   roles:
     - {role: infra.controller_configuration.organizations, when: controller_organizations is defined}
+    - {role: infra.controller_configuration.execution_environments, when: controller_execution_environments is defined}
+    - {role: infra.controller_configuration.credentials, when: controller_credentials is defined}
     - {role: infra.controller_configuration.projects, when: controller_projects is defined}
     - {role: infra.controller_configuration.inventories, when: controller_inventories is defined}
     - {role: infra.controller_configuration.hosts, when: controller_hosts is defined}

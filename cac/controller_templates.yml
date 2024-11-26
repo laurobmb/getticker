@@ -1,0 +1,36 @@
+---
+controller_templates:
+  - name: Get Tiker main_module
+    description: "{{ description }}" 
+    organization: "{{ orgs }}"
+    project: Statusinvest Collection Project
+    inventory: default_blanck
+    playbook: "main_module.yml"
+    scm_branch: "main"
+    forks: 0
+    limit: ""
+    verbosity: 0
+    job_type: "run"
+    job_slice_count: 1
+    ask_variables_on_launch: false
+    execution_environment: ee-openssl
+    extra_vars:
+      cluster: cluster
+
+  - name: Get Tiker main_role
+    description: "{{ description }}" 
+    organization: "{{ orgs }}"
+    project: Statusinvest Collection Project
+    inventory: default_blanck
+    playbook: "main_role.yml"
+    scm_branch: "main"
+    forks: 0
+    limit: ""
+    verbosity: 0
+    job_type: "run"
+    job_slice_count: 1
+    ask_variables_on_launch: false
+    execution_environment: ee-openssl
+    extra_vars:
+      cluster: cluster
+

@@ -1,5 +1,0 @@
----
-controller_inventories:
-  - name: localhost
-    organization: statusinvest
-    description: created by Ansible Playbook - for RHVM-01

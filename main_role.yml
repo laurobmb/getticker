@@ -1,0 +1,16 @@
+---
+- name: STATUSINVEST Role
+  hosts: localhost
+
+  vars:
+    acoes: 'petr4'
+    fundos: 'hgre11'
+
+  roles:
+    - role: laurobmb.statusinvest.getdata
+
+  tasks:
+
+    - name: Debug modulo
+      ansible.builtin.debug:
+        msg: "{{ greeting }}"

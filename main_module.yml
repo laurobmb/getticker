@@ -1,16 +1,10 @@
 ---
-- name: STATUSINVEST
+- name: STATUSINVEST Module
   hosts: localhost
-
-  collections:
-    - laurobmb.statusinvest
 
   vars:
     acoes: 'petr4'
     fundos: 'hgre11'
-
-  # roles:
-  #   - role: laurobmb.statusinvest.getdata
 
   tasks:
     - name: Usando o modulo diretamente

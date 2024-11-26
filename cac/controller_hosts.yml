@@ -1,7 +1,7 @@
 ---
 controller_hosts:
   - name: localhost
-    inventory: localhost
+    inventory: default_blanck
     variables:
       some_var: some_val
       ansible_connection: local

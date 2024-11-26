@@ -1,4 +1,4 @@
 ---
-- src: https://github.com/laurobmb/ansible_statusinvest_collection.git
+- src: https://github.com/laurobmb/laurobmb.statusinvest.git
   scm: git
   name: laurobmb.statusinvest
